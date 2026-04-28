@@ -9,7 +9,6 @@ def delete_at(my_list=[], idx=0):
     Returns:
         list: A new list with the element at the specified index removed.
     """
-    def delete_at(my_list=[], idx=0):
     if idx < 0 or idx >= len(my_list):
         return my_list
 
