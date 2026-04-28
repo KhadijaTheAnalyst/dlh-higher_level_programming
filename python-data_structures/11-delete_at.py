@@ -19,4 +19,3 @@ def delete_at(my_list=[], idx=0):
             new_list.append(my_list[index])
 
     return new_list
-
