@@ -6,7 +6,8 @@ def divisible_by_2(my_list=[]):
         my_list (list): A list of integers.
 
     Returns:
-        list: A list of booleans indicating whether each number is divisible by 2.
+        list: A list of booleans indicating whether each number
+        is divisible by 2.
     """
     result = []
     for value in my_list:
