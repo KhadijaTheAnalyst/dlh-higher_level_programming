@@ -19,7 +19,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
     return (tuple_a[0] + tuple_b[0],
     tuple_a[1] + tuple_b[1])
     """
-    # Ensure both tuples have at least 2 elements by padding with zeros if necessary
+    # Ensure both tuples have at least 2 elements by
+    # padding with zeros if necessary
     first_a = tuple_a[0] if len(tuple_a) > 0 else 0
     second_a = tuple_a[1] if len(tuple_a) > 1 else 0
     first_b = tuple_b[0] if len(tuple_b) > 0 else 0
@@ -27,5 +28,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
     tuple_a = (first_a, second_a)
     tuple_b = (first_b, second_b)
 
-    # Return the element-wise sum of the first two elements of each tuple
+    # Return the element-wise sum of the first two
+    # elements of each tuple
     return (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
