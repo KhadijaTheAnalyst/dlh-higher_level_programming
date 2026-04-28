@@ -6,7 +6,7 @@ def multiple_returns(sentence):
         sentence (str): The string to analyze.
 
     Returns:
-        tuple: A tuple containing the length of the string 
+        tuple: A tuple containing the length of the string
         and its first character.
 
     A value is treated as FALSE in conditions if it is:
