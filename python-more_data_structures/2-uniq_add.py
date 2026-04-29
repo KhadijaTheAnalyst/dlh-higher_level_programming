@@ -4,6 +4,7 @@ def uniq_add(my_list=[]):
     unique_integers = set(my_list)
     total = sum(unique_integers)
     return total
+
 def uniq_add1(my_list=[]):
     """Adds all unique integers in a list (only once for each integer)."""
     seen = []
@@ -13,4 +14,3 @@ def uniq_add1(my_list=[]):
             seen.append(value)
             total += value
     return total
-        seen.append(value)
