@@ -14,7 +14,6 @@ def safe_print_list_integers(my_list=[], x=0):
     print()
     return count
     """
-    i = 0 # index
     count = 0 # number of integers printed
     for i in range(x):
         try:
