@@ -3,6 +3,7 @@ def list_division(my_list_1, my_list_2, list_length):
     """Divide two lists element by element."""
     result = []
     for i in range(list_length):
+        division = 0
         try:
             division = my_list_1[i] / my_list_2[i]
         except ZeroDivisionError:
