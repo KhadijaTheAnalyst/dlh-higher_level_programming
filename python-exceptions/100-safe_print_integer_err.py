@@ -2,7 +2,8 @@
 import sys
 
 def safe_print_integer_err(value):
-    """Print an integer with "{:d}".format().
+    """
+    Print an integer with "{:d}".format().
 
     Args:
         value: The value to be printed
