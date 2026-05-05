@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+"""Module containing the Square class."""
+
+
 class Square:
-    __size = None
+    """A class that defines a square."""
     def __init__(self, size):
         self.__size = size
