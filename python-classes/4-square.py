@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Module containing the Square class."""
+
+
 class Square:
+    """A class that defines a square by size and calculates its area."""
     def __init__(self, size=0):
         # Let the setter do the validation and assignment
         self.__size = size
@@ -15,6 +19,7 @@ class Square:
 
     @size.setter
     def size(self, size):
+        """Set the size of the square with validation."""
         # Check type first (reject if not int, or if bool)
         if not isinstance(size, int) or isinstance(size, bool):
             raise TypeError("size must be an integer")
