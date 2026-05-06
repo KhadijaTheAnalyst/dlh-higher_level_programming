@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module containing the read_file function."""
 
+
 def read_file(filename=""):
     """Read a text file and print its contents to stdout.
 
