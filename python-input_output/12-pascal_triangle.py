@@ -3,7 +3,8 @@
 
 
 def pascal_triangle(n):
-    """Return a list of lists of integers representing the Pascal’s triangle of n.
+    """Return a list of lists of integers representing
+    the Pascal’s triangle of n.
 
     Args:
         n (int): The number of rows of the Pascal’s triangle to return.
@@ -20,4 +21,4 @@ def pascal_triangle(n):
             row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
         row.append(1)
         triangle.append(row)
-    return triangle 
+    return triangle
