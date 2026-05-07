@@ -40,3 +40,14 @@ class Student:
                 if hasattr(self, attr):
                     result[attr] = getattr(self, attr)
             return result
+
+    def reload_from_json(self, json):
+        """Replace all attributes of the Student instance.
+
+        Args:
+            json (dict): A dictionary containing the attributes to replace.
+        """
+        for key, value in json.items():
+            # setattr(object, "attribute_name", value) is used
+            # to set the value of the specified attribute on the object.
+            setattr(self, key, value)
