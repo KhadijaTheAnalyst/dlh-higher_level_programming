@@ -6,7 +6,7 @@ class Square:
     """A class that defines a square by size and calculates its area."""
     def __init__(self, size=0):
         # Let the setter do the validation and assignment
-        self.__size = size
+        self.size = size
 
     def area(self):
         """Calculate the area of the square."""
