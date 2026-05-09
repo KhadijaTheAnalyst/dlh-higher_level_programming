@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+"""
+JSON Methods Reference Guide
+
+Quick comparison of the 4 main JSON methods:
+
+    Method          Input                   Output              Use When
+    ------          -----                   ------              --------
+    json.dumps()    Python object           JSON string         Converting object to string
+    json.dump()     Python object + file    Writes to file      Saving object to file
+    json.loads()    JSON string             Python object       Converting string to object
+    json.load()     file                    Python object       Reading from file
+
+Memory trick:
+    's' = String (dumps/loads work with strings)
+    No 's' = File (dump/load work with files)
+
+Examples:
+
+    # Task 3: Object to JSON string
+    json_str = json.dumps([1, 2, 3])  # Returns: "[1, 2, 3]"
+
+    # Task 4: JSON string to object
+    my_list = json.loads("[1, 2, 3]")  # Returns: [1, 2, 3]
+
+    # Task 5: Save object to file
+    with open("file.json", "w") as f:
+        json.dump([1, 2, 3], f)  # Writes to file
+
+    # Task 6: Load object from file
+    with open("file.json", "r") as f:
+        my_list = json.load(f)  # Reads from file
+"""
+
+import json
+# Your code here...

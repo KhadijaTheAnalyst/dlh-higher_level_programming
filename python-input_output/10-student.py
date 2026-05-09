@@ -40,3 +40,5 @@ class Student:
                 if hasattr(self, attr):
                     result[attr] = getattr(self, attr)
             return result
+# else: dictionary comprehension
+#      return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}

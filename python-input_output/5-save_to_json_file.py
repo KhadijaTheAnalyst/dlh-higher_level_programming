@@ -15,3 +15,12 @@ def save_to_json_file(my_obj, filename):
         # Serialize the object to a JSON string and write it to the file
         # json.dump(my_obj, f)
         f.write(json.dumps(my_obj))
+
+
+"""
+dumps = dump to String
+dump  = dump to File
+
+loads = load from String
+load  = load from File
+"""

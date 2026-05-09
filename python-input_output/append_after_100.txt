@@ -1,0 +1,10 @@
+At School,
+Python is really important,
+"Python is cool!"
+"C is fun!"
+"Python is cool!"
+But it can be very hard if:
+- You don't get all Pythonic tricks
+"C is fun!"
+"Python is cool!"
+- You don't have strong C knowledge.

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import os
+import os # For checking if the file exists and for removing it
 import sys
 
 Student = __import__('11-student').Student
@@ -9,8 +9,8 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 path = sys.argv[1]
 
-if os.path.exists(path):
-    os.remove(path)
+if os.path.exists(path):   # Does student.json exist?
+    os.remove(path)  # Remove it to start with a clean slate
 
 student_1 = Student("John", "Doe", 23)
 j_student_1 = student_1.to_json()
