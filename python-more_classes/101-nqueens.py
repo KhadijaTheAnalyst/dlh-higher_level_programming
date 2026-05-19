@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 N Queens Problem Solver
-Uses backtracking to find all valid solutions for placing N queens on an N×N board
+Uses backtracking to find all valid solutions for placing
+N queens on an N×N board
 """
 
 import sys
@@ -28,7 +29,7 @@ def is_safe(board, row, col):
 def solve(n, row, board, solutions):
     """
     Recursively solve N queens using backtracking.
-    
+
     Args:
         n: Size of the board (N×N)
         row: Current row being processed
@@ -49,10 +50,18 @@ def solve(n, row, board, solutions):
             board[row] = col
             # Recurse to next row
             solve(n, row + 1, board, solutions)
-            # Backtrack (implicit - no need to reset, next iteration will overwrite)
+            # Backtrack (implicit - no need to reset,
+            # next iteration will overwrite)
 
 
 def main():
+    """
+    This runs when you execute the program
+    1. Check if user provided correct input
+    2. Start the solver
+    3. Print all solutions found
+    """
+
     # Validate number of arguments
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
