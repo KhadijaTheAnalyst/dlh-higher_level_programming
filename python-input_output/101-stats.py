@@ -36,8 +36,9 @@ def main():
                 continue
 
             # Parse log line using regex
-            # Look for: 3-digit status code, space(s), file size at end of line
-            match = re.search(r'(\d{3})\s+(\d+)$', line)
+            # Look for: 3-digit status code, spaces, file size
+            # (doesn't require file size to be at end - handles extra fields)
+            match = re.search(r'(\d{3})\s+(\d+)', line)
 
             if match:
                 status_code = int(match.group(1))
