@@ -5,7 +5,7 @@ Log parsing script that reads stdin and computes metrics.
 Input format:
   <IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>
 
-Metrics printed every 10 lines and after CTRL+C:
+Metrics printed every 10 lines, after CTRL+C, and at end of input:
   - Total file size (sum of all file sizes)
   - Count of each status code (ascending order)
 """
@@ -56,7 +56,9 @@ def main():
     except KeyboardInterrupt:
         # Print final stats on CTRL+C
         print()  # New line after ^C
-        print_stats(total_size, status_codes)
+
+    # Print final stats when input ends (EOF or CTRL+C)
+    print_stats(total_size, status_codes)
 
 
 if __name__ == "__main__":
