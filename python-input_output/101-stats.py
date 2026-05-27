@@ -36,8 +36,8 @@ def main():
                 continue
 
             # Parse log line using regex
-            # Pattern: "GET <path> HTTP/1.1" <status_code> <file_size>
-            match = re.search(r'"GET [^"]+" (\d{3}) (\d+)$', line)
+            # More flexible pattern: allow any quoted string, flexible spacing
+            match = re.search(r'"[^"]*"\s+(\d{3})\s+(\d+)$', line)
 
             if match:
                 status_code = int(match.group(1))
