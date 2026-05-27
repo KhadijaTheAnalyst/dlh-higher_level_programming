@@ -36,8 +36,8 @@ def main():
                 continue
 
             # Parse log line using regex
-            # More flexible pattern: allow any quoted string, flexible spacing
-            match = re.search(r'"[^"]*"\s+(\d{3})\s+(\d+)$', line)
+            # Look for: 3-digit status code, space(s), file size at end of line
+            match = re.search(r'(\d{3})\s+(\d+)$', line)
 
             if match:
                 status_code = int(match.group(1))
