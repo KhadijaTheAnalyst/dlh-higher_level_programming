@@ -1,17 +1,7 @@
 #!/usr/bin/python3
 """
 Log parsing script that reads stdin and computes metrics.
-
-Input format:
-  <IP Address> - [<date>] "GET /projects/260 HTTP/1.1"
-  <status code> <file size>
-
-Metrics printed every 10 lines, after CTRL+C, and at end of input:
-  - Total file size (sum of all file sizes)
-  - Count of each status code (ascending order)
-
 """
-
 
 import sys
 
@@ -23,7 +13,7 @@ line_count = 0
 
 def print_stats():
     """
-    This functions calculates the total file size and error codes
+    Print accumulated statistics.
     """
     print(f"File size: {total_size}")
     for code in status_codes:
@@ -32,25 +22,38 @@ def print_stats():
     sys.stdout.flush()
 
 
-try:
-    for line in sys.stdin:
-        line_count += 1
-        parts = line.split()
-        try:
-            status = int(parts[-2])
-            size = int(parts[-1])
-        except Exception:
-            continue
+def main():
+    """
+    Read stdin and compute metrics.
+    """
+    global total_size, line_count
 
-        total_size += size
-        if status in counts:
-            counts[status] += 1
+    try:
+        for line in sys.stdin:
+            parts = line.split()
 
-        if line_count % 10 == 0:
-            print_stats()
+            try:
+                status = int(parts[-2])
+                size = int(parts[-1])
+            except (IndexError, ValueError):
+                continue
 
-except KeyboardInterrupt:
+            total_size += size
+
+            if status in counts:
+                counts[status] += 1
+
+            line_count += 1
+
+            if line_count % 10 == 0:
+                print_stats()
+
+    except KeyboardInterrupt:
+        print_stats()
+        raise
+
     print_stats()
-    raise
 
-print_stats()
+
+if __name__ == "__main__":
+    main()
